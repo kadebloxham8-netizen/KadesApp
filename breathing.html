@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Breathing — Learning App</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Additional styling specific for breathing page */
+.breathing-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(13,28,61,0.06);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.breathing-card h1 {
+    margin-bottom: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.breathing-card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #64748b;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.controls label {
+    font-weight: 600;
+}
+
+.controls input[type="range"] {
+    width: 70%;
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #e0e7ff, #c7d2fe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: transform 4s ease-in-out, background 2s, box-shadow 2s;
+}
+
+#circle.inhale {
+    transform: scale(1.5);
+    background: linear-gradient(180deg, #c7d2fe, #a5b4fc);
+    box-shadow: 0 0 60px rgba(59,130,246,0.5);
+}
+
+#circle.exhale {
+    transform: scale(1);
+    background: linear-gradient(180deg, #e0e7ff, #c7d2fe);
+    box-shadow: 0 0 20px rgba(59,130,246,0.2);
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #0f172a;
+}
+</style>
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Learning App</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="typing.html">Typing</a></li>
+        <li><a href="math.html">Math</a></li>
+        <li><a href="memory.html">Memory</a></li>
+        <li><a href="speak.html">Speak</a></li>
+        <li><a href="ai.html">AI Chat</a></li>
+        <li><a href="breathing.html" class="active">Breathing</a></li>
+        <li><a href="settings.html">Settings</a></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <header class="header">Breathing Exercises</header>
+    
+    <div class="breathing-card">
+        <p>Set your session time (max 10 minutes) and follow the circle to breathe in and out.</p>
+
+        <div class="controls">
+            <label for="duration">Duration: <span id="durationLabel">1</span> min</label>
+            <input type="range" id="duration" min="1" max="10" value="1">
+            <div>
+                <button id="startBtn">Start</button>
+                <button id="stopBtn">Stop</button>
+            </div>
+        </div>
+
+        <div>
+            <div id="circle">Ready</div>
+            <div class="timer" id="timeLeft">00:00</div>
+        </div>
+    </div>
+</div>
+
+<script src="breathing.js"></script>
+</body>
+</html>

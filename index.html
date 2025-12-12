@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Learning App</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Page Layout */
+.content {
+    padding: 40px;
+}
+
+/* Header */
+.header {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Intro section */
+.intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.intro .creator {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.intro .quote {
+    font-size: 16px;
+    color: #4b5563;
+}
+
+/* Tile Grid */
+.tile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* Each Tile */
+.tile {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    cursor: pointer;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.tile h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.tile p {
+    font-size: 15px;
+    color: #4b5563;
+}
+
+/* Icons (optional) */
+.tile-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+    color: #2563eb;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+    <h2>Learning App</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="typing.html">Typing</a></li>
+            <li><a href="math.html">Math</a></li>
+            <li><a href="memory.html">Memory</a></li>
+            <li><a href="speak.html">Speak</a></li>
+            <li><a href="ai.html">AI Chat</a></li>
+            <li><a href="breathing.html">Breathing</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <header class="header">Welcome to Your Learning App!</header>
+
+    <section class="intro">
+        <p class="creator">Made By Kade Bloxham</p>
+        <p class="quote">"I believe that autistic people are the same as us normal people, they just need a little help."</p>
+    </section>
+
+    <!-- Tile Dashboard -->
+    <section class="tile-grid">
+
+        <div class="tile" onclick="location.href='typing.html'">
+            <div class="tile-icon">⌨️</div>
+            <h3>Typing</h3>
+            <p>Practice your typing speed and accuracy.</p>
+        </div>
+
+        <div class="tile" onclick="location.href='math.html'">
+            <div class="tile-icon">➗</div>
+            <h3>Math</h3>
+            <p>Sharpen math skills with fast quizzes.</p>
+        </div>
+
+        <div class="tile" onclick="location.href='memory.html'">
+            <div class="tile-icon">🧠</div>
+            <h3>Memory</h3>
+            <p>Improve memory through matching games.</p>
+        </div>
+
+        <div class="tile" onclick="location.href='speak.html'">
+            <div class="tile-icon">🎤</div>
+            <h3>Speak</h3>
+            <p>Practice speech and communication skills.</p>
+        </div>
+
+        <div class="tile" onclick="location.href='ai.html'">
+            <div class="tile-icon">🤖</div>
+            <h3>AI Chat</h3>
+            <p>Ask anything and explore the AI tutor.</p>
+        </div>
+
+        <div class="tile" onclick="location.href='breathing.html'">
+            <div class="tile-icon">💨</div>
+            <h3>Breathing</h3>
+            <p>Relax and breathe with guided exercises.</p>
+        </div>
+
+        <div class="tile" onclick="location.href='settings.html'">
+            <div class="tile-icon">⚙️</div>
+            <h3>Settings</h3>
+            <p>Customize your app experience.</p>
+        </div>
+
+    </section>
+
+</div>
+
+<script src="index.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>

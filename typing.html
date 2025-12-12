@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Lesson</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>My App</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="typing.html" class="active">Typing</a></li>
+            <li><a href="math.html">Math</a></li>
+            <li><a href="memory.html">Memory</a></li>
+            <li><a href="speak.html">Speak</a></li>
+            <li><a href="ai.html">AI Chat</a></li>
+            <li><a href="breathing.html">Breathing</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <header>Typing Lesson</header>
+
+    <section style="margin-top:20px;">
+        <h3>Instructions</h3>
+        <p>Click "Start Lesson" to begin. Type each word shown. Press Enter to move to the next word. If you make a mistake, it will say "Please try again".</p>
+        <p>You can switch between App Words and Non-App Words using the dropdown below.</p>
+    </section>
+
+    <section style="margin-top:20px;">
+        <label for="wordType">Choose Word List:</label>
+        <select id="wordType">
+            <option value="app">App Words</option>
+            <option value="nonApp">Non-App Words</option>
+        </select>
+    </section>
+
+    <section class="typing-controls" style="margin-top:20px;">
+        <button id="startLesson" class="primary-btn">Start Lesson</button>
+        <button id="nextWord" class="primary-btn">Next Word</button>
+        <button id="restartLesson" class="primary-btn">Restart Lesson</button>
+        <button id="hintBtn" class="primary-btn">Hint</button>
+    </section>
+
+    <section class="typing-area" style="margin-top:20px;">
+        <p id="currentWord" style="font-size:28px;"></p>
+        <input type="text" id="typingInput" placeholder="Type here..." autocomplete="off">
+        <p id="feedback" style="font-size:18px; margin-top:10px;"></p>
+        <p id="wpm" style="margin-top:10px; font-weight:bold;"></p>
+    </section>
+
+    <section style="margin-top:30px;">
+        <h3>Tips for Typing</h3>
+        <ul>
+            <li>Keep your eyes on the word, not the keyboard.</li>
+            <li>Use the correct finger placement.</li>
+            <li>Focus on accuracy first, speed comes later.</li>
+            <li>Use hints if needed, then try again.</li>
+        </ul>
+    </section>
+
+    <section style="margin-top:30px;">
+        <h3>Progress</h3>
+        <p>Track your WPM (Words Per Minute) and accuracy as you practice. Repeat lessons to improve!</p>
+        <p id="lessonSummary"></p>
+    </section>
+
+    <footer style="margin-top:50px; font-size:14px; color:#555;">
+        <p>© 2025 Learning App by Kade Bloxham. All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="typing.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>

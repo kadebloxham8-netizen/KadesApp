@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kade AI Chat</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="ai.css">
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+    <h2>Learning App</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="typing.html">Typing</a></li>
+            <li><a href="math.html">Math</a></li>
+            <li><a href="memory.html">Memory</a></li>
+            <li><a href="speak.html">Speak</a></li>
+            <li><a href="ai.html" class="active">AI Chat</a></li>
+            <li><a href="breathing.html">Breathing</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <header class="header">Kade's AI Chat</header>
+
+    <section class="ai-section">
+        <div id="chatBox">
+            <div id="output"></div>
+
+            <div id="chatControls">
+                <input id="userInput" type="text" placeholder="Ask something...">
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+
+        <h3>Loaded Keywords</h3>
+        <button id="toggleKeys">Show / Hide Keywords</button>
+        <div id="keys" class="hidden"></div>
+    </section>
+</div>
+
+<script src="ai.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>

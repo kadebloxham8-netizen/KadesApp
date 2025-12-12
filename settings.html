@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - Learning App</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+<!-- Sidebar Navigation (same as index) -->
+<div class="sidebar">
+    <h2>Learning App</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="typing.html">Typing</a></li>
+            <li><a href="math.html">Math</a></li>
+            <li><a href="memory.html">Memory</a></li>
+            <li><a href="speak.html">Speak</a></li>
+            <li><a href="ai.html">AI Chat</a></li>
+            <li><a href="breathing.html">Breathing</a></li>
+            <li><a href="settings.html" class="active">Settings</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <header class="header">Settings</header>
+
+    <section class="settings-wrapper">
+
+        <div class="setting-item">
+            <label>Dark Mode</label>
+            <label class="switch">
+                <input type="checkbox" id="darkMode">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <label>Sound Effects Volume</label>
+            <input type="range" id="soundVolume" min="0" max="100">
+        </div>
+
+        <div class="setting-item">
+            <label>Difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="setting-item">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+
+        <button id="saveBtn" class="save-button">Save Settings</button>
+        <p id="statusMsg"></p>
+    </section>
+
+    <!-- Footer (optional if you want it like index) -->
+    <footer>
+        <p>© 2025 Learning App by Kade Bloxham. All rights reserved.</p>
+        <p>Version 1.0.0</p>
+    </footer>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+</html>
