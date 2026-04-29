@@ -6,9 +6,10 @@
 <title>Speak — Learning App</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- Sidebar Navigation -->
+<!-- Sidebar -->
 <div class="sidebar">
     <h2>Learning App</h2>
     <nav>
@@ -25,35 +26,50 @@
     </nav>
 </div>
 
-<!-- Main Content -->
+<!-- Main -->
 <div class="content">
-    <header class="header">Text to Speech</header>
+<header class="header">Speak Practice</header>
 
-    <section class="speak-container">
-        <textarea id="textInput" placeholder="Type something to speak..."></textarea>
+<section class="speak-container">
 
-        <div class="voice-select-row" style="margin-bottom:20px;">
-            <select id="voiceSelect">
-                <!-- JS will populate voices -->
-            </select>
-            <select id="langSelect">
-                <option value="en-US">English</option>
-                <option value="es-ES">Spanish</option>
-                <option value="zh-CN">Chinese</option>
-                <option value="it-IT">Italian</option>
-            </select>
-            <button id="speakBtn">Speak</button>
-        </div>
+<!-- PRACTICE -->
+<h2>Practice</h2>
 
-        <div id="messageBox">Select a voice and language, then type text to speak.</div>
-    </section>
+<div class="button-group">
+    <button onclick="setLevel('easy')">Easy</button>
+    <button onclick="setLevel('medium')">Medium</button>
+    <button onclick="setLevel('hard')">Hard</button>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Learning App by Kade Bloxham. All rights reserved.</p>
-        <p>Version 1.0.0</p>
-        <p>Safe and professional for all learners.</p>
-    </footer>
+<h2 id="prompt">Pick a level</h2>
+
+<textarea id="output" placeholder="Your speech will appear here..."></textarea>
+
+<div class="button-group">
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+</div>
+
+<div class="button-group">
+    <button id="nextBtn">Next</button>
+    <button id="hearBtn">Hear It</button>
+</div>
+
+<p id="status">Waiting...</p>
+
+<hr>
+
+<!-- TEXT TO SPEECH -->
+<h2>Text to Speech</h2>
+
+<textarea id="textInput" placeholder="Type something..."></textarea>
+
+<div class="voice-select-row">
+    <select id="voiceSelect"></select>
+    <button id="speakBtn">Speak</button>
+</div>
+
+</section>
 </div>
 
 <script src="speak.js"></script>
